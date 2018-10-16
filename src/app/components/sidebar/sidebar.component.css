@@ -1,0 +1,8 @@
+.name-buttons {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}

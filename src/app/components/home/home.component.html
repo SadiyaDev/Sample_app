@@ -1,0 +1,7 @@
+<div class="container-fluid">
+  <top-navbar [currentUser]="_currentUser" (filterString)="setFilter($event)"></top-navbar>
+  <div class="row">
+    <sidebar [currentUser]="_currentUser" [details]="_details" [setFilter]="_setFilter" (selectedUser)="setSelectedUser($event)"></sidebar>
+    <right-panel [currentSelectedUser]="_currentSelectedUser" [details]="_details"></right-panel>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="col-xs-8">
+  <div class="col-xs-12">
+    <div class="col-xs-12 col-sm-4 vertical-margin">
+      <img *ngIf="_currentSelectedUser" src="{{_currentSelectedUser.img}}" class="user-image">
+    </div>
+    <div class="col-xs-12 col-sm-8 message vertical-margin">
+      <button class="btn btn-default font-bolder message-button">Send Message</button>
+      <div style="display: flex">
+        <i class="material-icons font-22" *ngFor="let star of favoriteArray">{{star}}</i>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 align-center">
+    <p *ngIf="_currentSelectedUser" class="font-bolder">{{_currentSelectedUser.Description}}</p>
+  </div>
+  <div class="col-xs-12 align-center">
+    <p *ngIf="_currentSelectedUser" class="font-bolder">{{_currentSelectedUser.Description}}</p>
+  </div>
+  <div class="col-xs-12">
+    <div class="col-xs-12 col-sm-6">
+      <table class="table table-bordered" *ngIf="_currentSelectedUser">
+        <thead>
+          <tr>
+            <th>Likes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let like of _currentSelectedUser.Likes">
+            <td>{{like}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+      <table class="table table-bordered" *ngIf="_currentSelectedUser">
+        <thead>
+          <tr>
+            <th>Dislikes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let dislike of _currentSelectedUser.Dislikes">
+            <td>{{dislike}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

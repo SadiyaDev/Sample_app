@@ -1,0 +1,11 @@
+<div class="row align-center">
+  <div class="col-xs-4 vertical-margin">
+    <input type="text" placeholder="Search" class="form-control" (input)="filter($event.target.value)"/>
+  </div>
+  <div class="col-sm-7 col-xs-5 vertical-margin text-right">
+    <span *ngIf="_currentUser" class="font-bolder">{{_currentUser.name}}</span>
+  </div>
+  <div class="col-sm-1 col-xs-3 vertical-margin">
+    <img *ngIf="_currentUser" src="{{_currentUser.img}}" class="user-image">
+  </div>
+</div>

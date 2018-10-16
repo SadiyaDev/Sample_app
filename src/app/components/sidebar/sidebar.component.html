@@ -1,0 +1,5 @@
+<div class="col-xs-4">
+<div *ngFor="let people of _details | filter : 'name' : _setFilter">
+  <button class="btn btn-primary name-buttons vertical-margin" *ngIf="people!==_currentUser" (click)="selectUser(people)">{{people?.name}}</button>		
+</div>	
+</div>
